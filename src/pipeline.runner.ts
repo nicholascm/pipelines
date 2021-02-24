@@ -73,6 +73,17 @@ export class PipelineRunner {
         let sourceBranch = null;
         let sourceVersion = null;
 
+        // debug
+        core.info(repositoryId);
+        core.info(this.repository);
+        core.info('---');
+        core.info(repositoryType);
+        core.info(this.githubRepo);
+        core.info('---');
+        core.info(buildDefinition.repository);
+        core.info('===');
+        core.info(this.repository);
+
         // If definition is linked to existing github repo, pass github source branch and source version to build
         if (p.equals(repositoryId, this.repository) && p.equals(repositoryType, this.githubRepo)) {
             core.debug("pipeline is linked to same Github repo");
