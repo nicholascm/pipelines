@@ -80,7 +80,7 @@ export class PipelineRunner {
         core.info(repositoryType);
         core.info(this.githubRepo);
         core.info('---');
-        core.info(buildDefinition.repository);
+        core.info(JSON.stringify(buildDefinition.repository));
         core.info('===');
         core.info(this.repository);
 
